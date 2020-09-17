@@ -2,20 +2,20 @@ import React, {useState} from "react";
 import Tweet from "./Tweet";
 
 
-
-
 function App(){
 
   const [users, setUsers]= useState([ 
-    {name: 'tomi', message: 'Hi there'},
-    {name: 'Escanor', message: 'I am Escanor The one'},
-    {name: 'google', message: 'I am awesome'}
+    {name: 'Tomi', message: 'Hi there'},
+    {name: 'Escanor', message: 'I am Escanor The Lion Sin of Pride'},
+    {name: 'Google', message: 'I am awesome'}
   ]);
 
     const [count, setCount] = useState(0);
 
-  
-    
+    const GymGoals = ['200kg Deadlift','160kg Squat', '120kg Bench', '100kg Overhead Press', '100kg Barbell Curl', '2min Plank'];
+    const listItems = GymGoals.map((gymgoal) =>
+    <li>{gymgoal}</li>);
+
   return (
 
     <div className="app" >
@@ -32,17 +32,15 @@ function App(){
             setUsers:
             
             <Tweet name="John" message ="Im a developer"/>
-          
      
           </label>
           
         </form>
-      
+      <h3>My Gym Goals</h3>
+     <ul>{listItems}</ul>
     </div>
     );
 
   };
   
-
-
 export default App;
