@@ -1,5 +1,6 @@
 import React, {useState } from "react"; 
 import Tweet from "./Tweet";
+import TicTacToe from "./TicTacToe";
 
 
 class ShoppingList extends React.Component {
@@ -61,7 +62,8 @@ function App(){
         <h2 style={{backgroundColor:"lightblue", alignItems: "center", fontSize: "20px"}}>It is {new Date().toLocaleTimeString()}.</h2>
       <h3 style={{backgroundColor:"lightblue",  alignItems: "center",fontSize:"20px"}}>My Gym Goals</h3>
      <ul style={{backgroundColor:"lightblue", alignItems: "center",fontSize:"20px"}}>{listItems}</ul>
-  
+        <TicTacToe/>
+        
     </div>
     );
 
